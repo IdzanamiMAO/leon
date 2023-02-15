@@ -64,11 +64,11 @@ h2 {
 
 .title__bg {
   background: #C6217D;
-  width: 503px;
-  -webkit-transform: skew(-10deg);
-  -moz-transform: skew(-10deg);
-  -o-transform: skew(-10deg);
-  transform: skew(-10deg);
+  width: 495px;
+  -webkit-transform: skew(-7deg);
+  -moz-transform: skew(-7deg);
+  -o-transform: skew(-71deg);
+  transform: skew(-7deg);
   box-sizing: border-box;
 }
 
@@ -82,6 +82,58 @@ h2 {
   text-transform: uppercase;
   color: #FFFFFF;
   text-align: center;
-  padding: 4px 20.5px 2px;
-  transform: skew(10deg);
+  padding: 5px 5px 3px;
+  transform: skew(7deg);
+}
+
+
+@media (max-width: 375px) {
+  .background {
+    max-width: 375px;
+    height: 730px;
+    width: 100%;
+    background:
+    url("./assets/img_mob/bg1.png") center no-repeat;
+    background-size: 375px 730px;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+  .caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 22px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 7px;
+  }
+
+  .title__bg {
+    width: 334px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 31px;
+    padding: 4.5px 5px 4.5px;
+  }
 }
