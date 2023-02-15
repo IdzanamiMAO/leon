@@ -17,6 +17,7 @@ h2 {
 }
 
 .background {
+  position: relative;
   max-width: 1920px;
   height: 1080px;
   width: 100%;
@@ -40,7 +41,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  margin: 0 auto;
+  margin: 0 auto 15px;
 }
 
 .logo {
@@ -58,7 +59,7 @@ h2 {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 6px;
+  margin-bottom: 4.5px;
   text-align: center;
 }
 
@@ -86,6 +87,42 @@ h2 {
   transform: skew(7deg);
 }
 
+.spinner__wrapper {
+  position: relative;
+  z-index: 1;
+  width: 835px;
+  height: 835px;
+  background:
+  url("./assets/img/bg_whell1.png") center no-repeat;
+  background-size: 835px auto;
+  margin: 0 auto;
+}
+
+.spinner {
+  position: absolute;
+  z-index: 2;
+  width: 642px;
+  top: 66px;
+  left: 94px;
+}
+
+.prize {
+  position: absolute;
+  z-index: 3;
+  width: 260px;
+  top: 69px;
+  left: 286px;
+}
+
+.button {
+  position: absolute;
+  z-index: 10;
+  width: 140px;
+  top: 319px;
+  left: 345px;
+  cursor: pointer;
+}
+
 
 @media (max-width: 375px) {
   .background {
@@ -96,6 +133,7 @@ h2 {
     url("./assets/img_mob/bg1.png") center no-repeat;
     background-size: 375px 730px;
     margin: 0 auto;
+    overflow: hidden;
   }
 
   .container {
@@ -136,4 +174,32 @@ h2 {
     line-height: 31px;
     padding: 4.5px 5px 4.5px;
   }
+
+  .spinner__wrapper {
+    width: 402px;
+    height: 402px;
+    background-size: 402px auto;
+    margin-top: 17px;
+    margin-left: -22.5px;
+  }
+
+  .spinner {
+    width: 309px;
+    top: 32px;
+    left: 45px;
+  }
+
+  .prize {
+    width: 125px;
+    top: 33px;
+    left: 138px;
+  }
+
+  .button {
+    width: 67.4px;
+    top: 153px;
+    left: 166px;
+    cursor: pointer;
+  }
+  
 }
