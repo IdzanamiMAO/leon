@@ -19,14 +19,109 @@ h2 {
 .background {
   position: relative;
   max-width: 1920px;
-  height: 1080px;
+  z-index: 1;
   width: 100%;
+  height: 1080px;
   background:
   url("./assets/img/bg1.png") center no-repeat;
   background-size: 1920px 1080px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
+.boll-1 {
+  position: absolute;
+  top: 5.2%; /* 56px */
+  left: 10.1%; /* 194px; */
+  width: 180px;
+  height: 171px;
+  background:
+  url("./assets/img/shar01.png") center no-repeat;
+  background-size: 180px 171px;
+}
+
+.boll-2 {
+  position: absolute;
+  bottom: 13.1%; /* 141px; */
+  right: -2.7%; /* -51px; */
+  z-index: 10;
+  width: 364px;
+  height: 358px;
+  background:
+  url("./assets/img/shar02.png") center no-repeat;
+  background-size: 364px 358px;
+}
+
+.boll-3 {
+  position: absolute;
+  top: 21%; /* 227px; */
+  right: 19%; /* 365px; */
+  width: 64px;
+  height: 64px;
+  background:
+  url("./assets/img/shar03.png") center no-repeat;
+  background-size: 64px 64px;
+}
+
+.boll-4 {
+  position: absolute;
+  top: 43.3%; /* 468px; */
+  right: 17.8%; /* 341px */;
+  z-index: 8;
+  width: 72px;
+  height: 72px;
+  background:
+  url("./assets/img/shar04.png") center no-repeat;
+  background-size: 72px 72px;
+}
+
+.boll-5 {
+  position: absolute;
+  bottom: 38.7%; /* 418px; */
+  left: 6.8%; /* 131px; */
+  width: 62px;
+  height: 62px;
+  background:
+  url("./assets/img/shar05.png") center no-repeat;
+  background-size: 62px 62px;
+}
+
+.boll-6 {
+  position: absolute;
+  top: 28.7%; /* 310px; */
+  right: 9.7%; /* 187px; */
+  width: 48px;
+  height: 48px;
+  background:
+  url("./assets/img/shar03.png") center no-repeat;
+  background-size: 48px 48px;
+}
+
+.dust {
+  position: absolute;
+  bottom: 2.7%; /* 29px; */
+  left: -1.1%; /* -22px; */
+  width: 1658px;
+  height: 921px;
+  background:
+  url("./assets/img/decals.png") center no-repeat;
+  background-size: 1658px 921px;
+}
+
+.girl {
+  position: absolute;
+  bottom: -0.9%; /* -10px; */
+  left: 4.6%; /* 88px; */
+  z-index: 9;
+  width: 838px;
+  height: 804px;
+  background:
+  url("./assets/img/devushka1.png") center no-repeat;
+  background-size: 838px 804px;
+}
+
+
+/*контент*/
 .container {
   display: flex;
   flex-direction: column;
@@ -34,6 +129,7 @@ h2 {
   align-content: center;
   margin: 0 auto;
   max-width: 835px;
+  width: 100%;
 }
 
 .caption {
@@ -89,7 +185,7 @@ h2 {
 
 .spinner__wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   width: 835px;
   height: 835px;
   background:
@@ -100,7 +196,7 @@ h2 {
 
 .spinner {
   position: absolute;
-  z-index: 2;
+  z-index: 6;
   width: 642px;
   top: 66px;
   left: 94px;
@@ -108,7 +204,7 @@ h2 {
 
 .prize {
   position: absolute;
-  z-index: 3;
+  z-index: 7;
   width: 260px;
   top: 69px;
   left: 286px;
@@ -116,7 +212,7 @@ h2 {
 
 .button {
   position: absolute;
-  z-index: 10;
+  z-index: 100;
   width: 140px;
   top: 319px;
   left: 345px;
@@ -127,13 +223,72 @@ h2 {
 @media (max-width: 375px) {
   .background {
     max-width: 375px;
-    height: 730px;
+    height: 770px;
     width: 100%;
     background:
     url("./assets/img_mob/bg1.png") center no-repeat;
-    background-size: 375px 730px;
+    background-size: 375px 770px;
     margin: 0 auto;
-    overflow: hidden;
+  }
+
+  .boll-1 {
+    top: -1%;/* -7px; */
+    left: -11.2%; /* -42px; */
+    width: 94px;
+    height: 89px;
+    background-size: 94px 89px;
+  }
+
+  .boll-2 {
+    bottom: -8.2%; /* -63px; */
+    right: -22.4%; /* -84px; */
+    width: 190px;
+    height: 187px;
+    background-size: 190px 187px;
+  }
+
+  .boll-3 {
+    top: 2.6%; /* 20px; */
+    right: 6.9%; /* 26px; */
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+  }
+
+  .boll-4 {
+    top: 55.3%; /* 426px; */
+    right: -5.6%; /* -21px; */
+    width: 58px;
+    height: 58px;
+    background-size: 58px 58px;
+  }
+
+  .boll-5 {
+    top: 27.4%; /* 211px; */
+    left: -2.7%; /* -10px; */
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+  }
+
+  .boll-6 {
+    top: 23.6%; /* 182px; */
+    right: -2.1%; /* -8px; */
+    width: 39px;
+    height: 39px;
+    background-size: 39px 39px;
+  }
+
+  .dust {
+    display: none;
+  }
+
+  .girl {
+    bottom: -5.6%;/*  -43px; */
+    left: -2.7%; /* -10px; */
+    width: 410px;
+    height: 394px;
+    background-size: 410px 394px;
   }
 
   .container {
