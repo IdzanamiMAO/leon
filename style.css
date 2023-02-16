@@ -6,15 +6,49 @@ html {
 body,
 div,
 h1,
-h2 {
+h2,
+p {
   margin: 0;
+  text-transform: none;
 }
 
 @font-face {
-  font-family: "Uni_Sans";
-  src: url("./assets/fonts/Uni_Sans_Heavy_Italic.otf");
+  font-family: "UniSans_HeavyItalic";
+  src: url("./assets/fonts/UniSans-Trial-HeavyItalic.otf");
   font-weight: 900;
+  font-style: italic;
 }
+
+@font-face {
+  font-family: "UniSans_Bold";
+  src: url("./assets/fonts/UniSans-Trial-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniSans_SemiBold";
+  src: url("./assets/fonts/UniSans-Trial-SemiBold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniSans_Regular";
+  src: url("./assets/fonts/UniSans-Trial-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: "UniSans_Thin";
+  src: url("./assets/fonts/UniSans-Trial-HeavyItalic.otf");
+  font-weight: 900;
+  font-style: italic;
+}
+
 
 .background {
   position: relative;
@@ -147,7 +181,7 @@ h2 {
 }
 
 .subtitle {
-  font-family: "Uni_Sans";
+  font-family: "UniSans_HeavyItalic";
   font-style: italic;
   font-weight: 900;
   font-size: 32px;
@@ -170,7 +204,7 @@ h2 {
 }
 
 .title {
-  font-family: "Uni_Sans";
+  font-family: "UniSans_HeavyItalic";
   font-style: italic;
   font-weight: 900;
   font-size: 40px;
@@ -218,6 +252,93 @@ h2 {
   left: 345px;
   cursor: pointer;
 }
+
+
+/*попап*/
+.pop-up__wrapper {
+/*   display: none; */
+}
+
+.active { /*overlay*/
+  display: block;
+  position: absolute;
+  z-index: 100;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: right 0.8s;
+}
+
+.pop-up {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  max-width: 651px;
+  width: 100%;
+}
+
+.text {
+  position: absolute;
+  left: 0; right: 0; bottom: 236px;
+  margin: 0 auto 16px;
+  max-width: 312px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.win__caption{
+  font-family: "UniSans_SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFD953;
+  text-shadow: 0px 0px 10px #FFD953;
+}
+
+.win__desc {
+  font-family: "UniSans_Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0 38px;
+  text-transform: none;
+}
+
+.button__wrapper {
+  position: absolute;
+  left: 0; right: 0; bottom: 141px;
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.win__button {
+  font-family: "UniSans_Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #313131;
+  text-shadow: 0px 2px 0px #FFEA83;
+  background: linear-gradient(180deg, #FEED7C 0%, #FFC54B 100%);
+  border-radius: 40px;
+  padding: 30px 118px 24px;
+}
+
+
 
 
 @media (max-width: 375px) {
@@ -356,5 +477,41 @@ h2 {
     left: 166px;
     cursor: pointer;
   }
-  
+
+  .win__img {
+    width: 406px;
+    margin-left: -15.6px;
+    margin-top: 7px;
+  }
+
+  .text {
+    left: 0; right: 0; bottom: 186px;
+  }
+
+
+  .win__caption{
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .win__desc {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 78px;
+  }
+
+  .button__wrapper {
+    position: absolute;
+    left: 0; right: 0; bottom: 134px;
+    margin: 0 auto;
+    max-width: 218px;
+
+  }
+
+  .win__button {
+    font-size: 24px;
+    line-height: 29px;
+    padding: 14px 64px 10px;
+  }
+
 }
